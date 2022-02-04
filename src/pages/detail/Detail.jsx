@@ -13,7 +13,7 @@ import "./detail.scss";
 
 const Detail = () => {
   const { category, id } = useParams();
-  const [item, setItem] = useState(null);
+  const [item, setItem] = useState();
 
   useEffect(() => {
     const getDetail = async () => {
