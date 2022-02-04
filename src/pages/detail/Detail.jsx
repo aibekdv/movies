@@ -1,6 +1,5 @@
-import React from "react";
+import React ,{ useEffect, useState }from "react";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react/cjs/react.development";
 import Loader from "../../components/loader/Loader";
 import CastList from "./CastList";
 import VideoList from "./VideoList";
@@ -13,7 +12,7 @@ import "./detail.scss";
 
 const Detail = () => {
   const { category, id } = useParams();
-  const [item, setItem] = useState();
+  const [item, setItem] = useState(null);
 
   useEffect(() => {
     const getDetail = async () => {
